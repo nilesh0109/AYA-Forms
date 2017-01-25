@@ -1,0 +1,13 @@
+form {
+    input[type] {
+        padding: 6px 10px;
+        border: 0;
+        border-radius: 0;
+        background: $cream;
+        padding-#{$left}: 30px;
+
+        &:hover, &:active, &:focus {
+            outline: 0;
+        }
+    }
+}

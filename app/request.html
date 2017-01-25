@@ -1,0 +1,401 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>FDF</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="assets/css/style-en-us.min.css" rel="stylesheet">
+    <script src="assets/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="yellow-back">
+  <div class="container clearfix">
+    <div class="user-form float-r">
+      <div class='login-container'>
+        <div class="form-element username">
+          <input type="text" placeholder="User Name:" class="required">
+          
+        </div>
+        <div class="form-element password">
+          <input type="Password" placeholder="Password:" class="required">
+          <a href="forgot-password.html" class="link forgot-pass-link">Forgot Password</a>
+        </div>
+        <div class="form-element">
+          <a href="dashboard.html" class="form-button login-btn">Login</a>
+        </div>
+        <div class="form-element">
+          <a href="register.html" class="button">Register</a>
+        </div>
+      </div>
+      <div class="loggedin-container clearfix">
+        <div class="loggedin-user-image">
+          <img src="assets/img/user.jpg" />
+        </div>
+        <div class="loggedin-user-details">
+          <span class="loggedin-user-name">User Name Sample</span>
+          <span class="loggedin-user-email">mail@account.com</span>
+          <div class="loggedin-user-button">
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+            <input type="button" class="logout-button" value="Logout" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="float-l header-language-container">
+      <div class="language-control">
+        <a class="ar" href="javascript:void(0)">عربي</a>
+        <a class="en" href="javascript:void(0)">English</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="logo-container">
+  <div class="container clearfix">
+    <div class="float-l logo">
+      <a href="/">
+        <img src="assets/img/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="float-r logo">
+      <a href="javascript:void(0)">
+        <img src="assets/img/logo2.png" alt="Logo">
+      </a>
+    </div>
+    <div class="logo awards-logo">
+      <figure class="awards-logo-wrapper">
+        <img src="assets/img/logo3.png" alt="Logo">
+        <a href="#familyAwards" class="familyAwardsLink"></a>
+        <a href="#womenAthelete" class="womenAtheleteLink"></a>
+        <a href="#arabYouth" class="arabYouthLink"></a>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="login-error-box-wrapper">
+  <div class="login-error-box">
+    <i class="fa fa-3x fa-close"></i>
+    <span>Incorrect Username or password</span>
+  </div>
+</div>
+    </header>
+    <main class="main" role="main">
+    <div class="container">
+	<div class="filters-wrapper">
+		<div class="filter-row">
+			<a href="javascript:void(0)" class="gray-button select-award-btn">
+				<span>Select Award</span>
+				<i class="fa fa-plus fa-lg"></i>
+			</a>
+		</div>
+		<div class="filter-row selected-awards">
+			
+			<a href="javascript:void(0)" class="gray-button rounded filter-item">
+				<span class="text-uppercase">Creator Arab Youth</span>
+			</a>
+			<a href="javascript:void(0)" class="gray-button rounded filter-item">
+				<span class="text-uppercase">Model Family</span>
+			</a>
+			<a href="javascript:void(0)" class="gray-button rounded filter-item">
+				<span class="text-uppercase">Excellent Women Athlete</span>
+			</a>
+		</div>
+		<div class="filter-row">
+			<div class="form-validate full-width clearfix">
+				<div class="radiobox date-select">
+					<label><input type="radio" name="dates" value="particular-date"><span class="radio-content">Date</span></label>
+					<label><input type="radio" name="dates" value="between-dates" checked><span class="radio-content">Between Dates</span></label>
+				</div>
+				
+				<div class="between-dates visible">
+					<div class="col-20 padding-left-0">
+						<label for="fromdate" class="form-label">From:</label>
+						<div class="input-group date" data-provide="datepicker">
+							<input type="text" class="form-control" name="fromdate" placeholder="date">
+							<div class="input-group-addon">
+								<span class="fa fa-calendar"></span>
+							</div>
+						</div>
+					</div>
+					<div class="col-20">
+						<label for="todate" class="form-label">To:</label>
+						<div class="input-group date" data-provide="datepicker">
+							<input type="text" class="form-control" name="todate" placeholder="date">
+							<div class="input-group-addon">
+								<span class="fa fa-calendar"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="particular-date">
+					<div class="col-20 padding-left-0">
+						<label for="p-date" class="form-label">Date:</label>
+						<div class="input-group date" data-provide="datepicker">
+							<input type="text" class="form-control" name="todate" placeholder="date">
+							<div class="input-group-addon">
+								<span class="fa fa-calendar"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-30 req-no-wrapper">
+					<label for="req-no" class="form-label">Request Number:</label>
+					<input type="text" name="req-no" placeholder="Your Middle Name">
+				</div>
+				<div class="float-r filter-submit">
+					<a href="javascript:void(0)" class="form-button">Search</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="table-container">
+		<div class="table-wrapper">
+			<div class="table-row table-head">
+				<div class="table-col"><span>Details</span></div>
+				<div class="table-col"><span>Status</span></div>
+				<div class="table-col"><span>Mobile</span></div>
+				<div class="table-col"><span>Applicant</span></div>
+				<div class="table-col"><span>Cycle</span></div>
+				<div class="table-col"><span>Award Name</span></div>
+				<div class="table-col"><span>Request No</span></div>
+				<div class="table-col"><span>Request Date</span></div>
+			</div>
+			<div class="table-row">
+				<div class="table-col">
+					<a href="javascript:void(0)" class="gray-button">
+						<span>View Details</span>
+					</a>
+				</div>
+				<div class="table-col"><span>Complete Review</span></div>
+				<div class="table-col"><span>+971 501234567</span></div>
+				<div class="table-col"><span>Muhammad Amir</span></div>
+				<div class="table-col"><span>Second Session 2015</span></div>
+				<div class="table-col"><span>Creator Arab Youth</span></div>
+				<div class="table-col"><span>AYA-38227</span></div>
+				<div class="table-col"><span>12-05-2016</span></div>
+			</div>
+			<div class="table-row">
+				<div class="table-col">
+					<a href="javascript:void(0)" class="gray-button">
+						<span>View Details</span>
+					</a>
+				</div>
+				<div class="table-col"><span>Complete Review</span></div>
+				<div class="table-col"><span>+971 501234567</span></div>
+				<div class="table-col"><span>Muhammad Amir</span></div>
+				<div class="table-col"><span>Second Session 2015</span></div>
+				<div class="table-col"><span>Model Family</span></div>
+				<div class="table-col"><span>AYA-38227</span></div>
+				<div class="table-col"><span>12-05-2016</span></div>
+			</div>
+			<div class="table-row">
+				<div class="table-col">
+					<a href="javascript:void(0)" class="gray-button">
+						<span>View Details</span>
+					</a>
+				</div>
+				<div class="table-col"><span>Complete Review</span></div>
+				<div class="table-col"><span>+971 501234567</span></div>
+				<div class="table-col"><span>Muhammad Amir</span></div>
+				<div class="table-col"><span>Second Session 2015</span></div>
+				<div class="table-col"><span>Excellant Women Athelete</span></div>
+				<div class="table-col"><span>AYA-38227</span></div>
+				<div class="table-col"><span>12-05-2016</span></div>
+			</div>
+			<div class="table-row">
+				<div class="table-col">
+					<a href="javascript:void(0)" class="gray-button">
+						<span>View Details</span>
+					</a>
+				</div>
+				<div class="table-col"><span>Complete Review</span></div>
+				<div class="table-col"><span>+971 501234567</span></div>
+				<div class="table-col"><span>Muhammad Amir</span></div>
+				<div class="table-col"><span>Second Session 2015</span></div>
+				<div class="table-col"><span>Creator Arab Youth</span></div>
+				<div class="table-col"><span>AYA-38227</span></div>
+				<div class="table-col"><span>12-05-2016</span></div>
+			</div>
+			<div class="table-row">
+				<div class="table-col">
+					<a href="javascript:void(0)" class="gray-button">
+						<span>View Details</span>
+					</a>
+				</div>
+				<div class="table-col"><span>Complete Review</span></div>
+				<div class="table-col"><span>+971 501234567</span></div>
+				<div class="table-col"><span>Muhammad Amir</span></div>
+				<div class="table-col"><span>Second Session 2015</span></div>
+				<div class="table-col"><span>Model Family</span></div>
+				<div class="table-col"><span>AYA-38227</span></div>
+				<div class="table-col"><span>12-05-2016</span></div>
+			</div>
+			<div class="table-row">
+				<div class="table-col">
+					<a href="javascript:void(0)" class="gray-button">
+						<span>View Details</span>
+					</a>
+				</div>
+				<div class="table-col"><span>Complete Review</span></div>
+				<div class="table-col"><span>+971 501234567</span></div>
+				<div class="table-col"><span>Muhammad Amir</span></div>
+				<div class="table-col"><span>Second Session 2015</span></div>
+				<div class="table-col"><span>Creator Arab Youth</span></div>
+				<div class="table-col"><span>AYA-38227</span></div>
+				<div class="table-col"><span>12-05-2016</span></div>
+			</div>
+		</div>
+		<div class="pagination-wrapper">
+	<div class="content-wrapper">
+		<a href="javascript:void(0)" class="first pagination-btn">
+			<i class="fa fa-chevron-left"></i>
+			<i class="fa fa-chevron-left"></i>
+		</a>
+		<a href="javascript:void(0)" class="prev pagination-btn">
+			<i class="fa fa-chevron-left"></i>
+			<span>PREV</span>
+		</a>
+		<div class="pagination-text">
+			<span class="pageno">1</span>
+			<span>/</span>
+			<span class="pagecount">6</span>
+		</div>
+		<a href="javascript:void(0)" class="next pagination-btn">
+			<span>NEXT</span>
+			<i class="fa fa-chevron-right"></i>
+		</a>
+		<a href="javascript:void(0)" class="last pagination-btn">
+			<i class="fa fa-chevron-right"></i>
+			<i class="fa fa-chevron-right"></i>
+		</a>
+	</div>
+</div>
+		<div class="modal" id="select-modal">
+	<div class="modal-wrapper">
+		<div class="modal-header">
+			<h4 class="blue-text">Select Award</h4>
+		</div>
+		<div class="modal-body">
+			<div class="form-validate full-width">
+				<div class="clearfix">
+					<div class="col-50 no-border">
+						<label for="award" class="form-label">Award:</label>
+						<div class="custom-select margin-bottom-20">
+							<select name="award">
+								<option value="all" selected>All</option>
+								<option value="award1">award1</option>
+								<option value="award2">award2</option>
+								<option value="award3">award3</option>
+								<option value="award4">award4</option>
+								<option value="award5">award5</option>
+								<option value="award6">award6</option>
+								<option value="award7">award7</option>
+								<option value="award8">award8</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="modal-table">
+					<div class="table-row clearfix">
+						<div class="float-r ">
+							<a href="javascript:void(0)" class="form-button gray margin-right-15 select-all">Select All</a>
+							<a href="javascript:void(0)" class="form-button yellow clear-all">Clear All</a>
+						</div>
+					</div>
+					<div class="table-row clearfix no-padding">
+						<div class="col-50 no-border">
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category1">
+									<label for="category1"><span class="checkbox"></span>Category 1</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category2" checked>
+									<label for="category2"><span class="checkbox"></span>Category 2</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category3">
+									<label for="category2"><span class="checkbox"></span>Category 3</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category4">
+									<label for="category2"><span class="checkbox"></span>Category 4</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category5">
+									<label for="category2"><span class="checkbox"></span>Category 5</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-50 no-border">
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category6" checked>
+									<label for="category1"><span class="checkbox"></span>Category 6</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category7">
+									<label for="category2"><span class="checkbox"></span>Category 7</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category8" checked>
+									<label for="category2"><span class="checkbox"></span>Category 8</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category9">
+									<label for="category2"><span class="checkbox"></span>Category 9</label>
+								</div>
+							</div>
+							<div class="category-item">
+								<div class="checkbox-wrapper">
+									<input type="checkbox" name="category10">
+									<label for="category2"><span class="checkbox"></span>Category 10</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="float-r margin-top-25">
+					<a href="javascript:void(0)" class="form-button gray margin-right-15 cancel-modal">Cancel</a>
+					<a href="javascript:void(0)" class="form-button submit-modal">Apply</a>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer"></div>
+	</div>
+</div>
+	</div>
+</div>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <span>
+	Copyrights © 2016 - FDF Awards All rights reserved Total Visitors 2354852
+</span>
+    </footer>
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+  </body>
+</html>

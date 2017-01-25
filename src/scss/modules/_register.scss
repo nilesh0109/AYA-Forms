@@ -1,0 +1,54 @@
+.error-box {
+    border: 1px solid $red;
+    padding: 35px;
+    font-weight: bold;
+    background: #fef7f7;
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        margin: 10px 0;
+        padding: 20px;
+
+        > div {
+            float: none !important;
+        }
+    }
+
+    .login-links {
+        a:first-child {
+            margin-#{$right}: 35px;
+        }
+    }
+}
+
+@for $i from 0 through 4 {
+    .wizard-pages[data-regTypeIndex="#{$i}"] {
+        .tab-wrappers[data-formIndex] {
+            display: none;
+        }
+
+        .tab-wrappers[data-formIndex='#{$i}'] {
+            display: block;
+        }
+    }
+}
+
+.section-wrapper {
+    border: 1px solid #cac8c1;
+    position: relative;
+    margin: 30px 0;
+}
+
+.section-heading {
+    padding: 0px 10px 5px;
+    background: #fff;
+    display: inline-block !important;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    margin: 0px;
+}

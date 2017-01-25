@@ -1,0 +1,346 @@
+.header-language-container {
+    padding: 10px 0;
+}
+
+.language-control {
+    a {
+        display: block;
+        height: 30px;
+        width: 86px;
+        background: #f7f3e8;
+        text-align: center;
+        color: #89743b;
+        font-size: 18px;
+    }
+
+    .en {
+        display: none;
+    }
+
+    &.arabic {
+        .en {
+            display: block;
+        }
+
+        .ar {
+            display: none;
+        }
+    }
+}
+
+ul.breadcrumb-list {
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.breadcrumb-list li {
+    float: #{$left};
+    position: relative;
+    padding-#{$right}: 30px;
+    color: #656565;
+}
+
+ul.breadcrumb-list li a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #656565;
+}
+
+ul.breadcrumb-list li:first-child a, ul.breadcrumb-list li:last-child {
+    font-weight: bold;
+}
+
+ul.breadcrumb-list li:before {
+    content: "\f101";
+    position: absolute;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    #{$right}: 10px;
+    top: 4px;
+}
+
+ul.breadcrumb-list li:last-child:before {
+    visibility: hidden;
+}
+
+ul.breadcrumb-list li:last-child {
+    padding: 0;
+}
+
+.flexbox-wrapper.inner-flexbox-wrapper {
+    padding-top: 20px;
+}
+
+.profile-name-container {
+    background: #fff;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-name-image {
+    height: 91px;
+    width: 91px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-#{$right}: 30px;
+}
+
+.profile-name-image img {
+    width: 100%;
+}
+
+.profile-name-details span.user-name {
+    font-size: 13.5pt;
+    color: #626262;
+    display: block;
+    text-transform: capitalize;
+    line-height: 20px;
+}
+
+.profile-name-details span.user-cat {
+    font-size: 10pt;
+    color: #aeaeae;
+    text-transform: capitalize;
+}
+
+.profile-listing-item {
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    background: #fff;
+}
+
+.profile-listing-thread {
+    margin: 40px 0;
+}
+
+.profile-listing-title {
+    position: relative;
+    height: 60px;
+    display: -webkit-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    padding-#{$right}: 80px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    overflow: hidden;
+    color: #4d4d4d;
+    font-size: 17px;
+    background: #cfc29d;
+    padding: 20px;
+    border: 1px solid #cfc29d;
+    font-weight: bold;
+}
+
+span.profile-item-collapse:before, span.profile-item-collapse:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: '\f107';
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    #{$right}: 0;
+    top: 0;
+    text-align: center;
+    font-size: 35px;
+    line-height: 1;
+    padding-top: 13px;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    color: #4d4d4d;
+}
+
+span.profile-item-collapse:hover {
+    background: #b79e5b;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+span.profile-item-collapse:after {
+    background: #b79e5b;
+    color: #fff;
+    top: 100%;
+    content: '\f106';
+    padding-top: 10px;
+}
+
+.profile-listing-title:hover:after {
+    /* top: 0; */
+}
+
+.profile-scroll {
+    margin: 0;
+}
+
+.profile-listing-inner {}
+
+.profile-listing-details {
+    height: 400px;
+}
+
+@media only screen and (max-width: 480px) {
+    .profile-listing-inner {
+        padding: 30px;
+    }
+
+    .profile-listing-item.expand {
+        height: 260px;
+    }
+
+    .profile-listing-title {
+        font-size: 14px;
+    }
+}
+
+.profile-listing-title a.edit-profile-item {
+    position: absolute;
+    #{$right}: 70px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-weight: normal;
+    cursor: pointer;
+    padding: 0 10px;
+    padding-#{$left}: 25px;
+    border-radius: 3px;
+}
+
+a.edit-profile-item:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f14b";
+    position: absolute;
+    #{$left}: 5px;
+    top: 5px;
+    font-size: 18px;
+}
+
+span.profile-item-collapse {
+    position: absolute;
+    width: 60px;
+    #{$right}: 0;
+    height: 100%;
+    top: 0;
+}
+
+.profile-listing-item.expand {
+    height: 456px;
+}
+
+.profile-listing-item.expand .profile-listing-title {
+    color: #fff;
+    background: #b79e5b;
+}
+
+.profile-listing-item.expand span.profile-item-collapse:after {
+    top: 0;
+}
+
+span.profile-item-collapse:hover:before {
+    color: #fff;
+}
+
+.profile-item-row {
+    padding: 25px 20px;
+    border-bottom: 1px solid #e1dac7;
+    overflow: hidden;
+}
+
+.profile-item-row span {
+    display: block;
+    line-height: 24px;
+}
+
+.profile-item-row span.profile-label {
+    font-size: 14px;
+    color: #135083;
+}
+
+span.profile-caption {
+    color: #626262;
+    font-size: 18px;
+}
+
+.profile-listing-title a.edit-profile-item.cancel-edit-mode {
+    &:before {
+        content: "\f00d";
+    }
+}
+
+.save-edit-mode, .cancel-edit-mode {
+    display: none;
+}
+
+.profile-listing-title a.edit-profile-item.save-edit-mode:before {
+    content: "\f0c7";
+}
+
+.profile-listing-title a.edit-profile-item:hover {
+    background: #a0894a;
+    color: #fff;
+}
+
+.edit-mode a.edit-profile-item {
+    display: none;
+}
+
+.edit-mode {
+    a.cancel-edit-mode {
+        display: block;
+        margin-#{$right}: 85px;
+        background: #a0894a;
+        color: #fff;
+    }
+
+    a.save-edit-mode {
+        display: block;
+        background: #a0894a;
+        color: #fff;
+    }
+}
+
+.profile-caption-edit {
+    max-width: 300px;
+    float: #{$left};
+    margin-#{$right}: 10px;
+    margin-top: 10px;
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+.profile-listing-item.edit-mode .profile-caption:not(.static) {
+    display: none;
+}
+
+.profile-listing-item.edit-mode .profile-caption-edit {
+    display: block;
+}
+
+figure.profile-caption.profile-thumbnail, figure.profile-caption.profile-thumbnail img {
+    position: static;
+    max-height: 57px;
+}
+
+.profile-listing-item .file-explorer-wrapper .browse-link {
+    width: 30%;
+    border: 1px solid #cac8c1;
+    text-align: center;
+}

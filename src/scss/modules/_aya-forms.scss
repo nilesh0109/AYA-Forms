@@ -1,0 +1,237 @@
+.form-section {
+    margin: 15px 0;
+    background: $white;
+    font-family: $font-gess-light;
+
+    .font-en {
+        font-family: $font-roboto;
+    }
+
+    &.steps-container {
+        margin-top: 50px;
+    }
+
+    .form-section-heading {
+        padding: 15px;
+        color: $white;
+        background: $blue;
+        margin: 0;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .fa {
+            cursor: pointer;
+        }
+    }
+}
+
+.section-title {
+    background: $yellow;
+    padding: 15px 0;
+    text-align: center;
+    color: $white;
+}
+
+.form-heading-row {
+    padding: 20px 15px;
+    background: $lightgray;
+    border: 1px solid #e1e1e1;
+
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .heading-wrap {
+        max-width: 230px;
+        font-family: $font-gess-light;
+    }
+
+    .heading {
+        margin: 0;
+        margin-#{$left}: 15px;
+        font-family: $font-gess-medium;
+    }
+}
+
+.gray-line {
+    width: 100%;
+    height: 1px;
+    background: #e1e1e1;
+    display: block;
+}
+
+.flex-wrapper {
+    display: flex;
+
+    &.justify-space-between {
+        justify-content: space-between;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        display: block;
+
+        > * {
+            text-align: $left;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .red-btn {
+            display: inline-block;
+        }
+    }
+}
+
+.steps-wrapper {
+    text-align: center;
+
+    .step {
+        display: inline-block;
+        vertical-align: middle;
+        margin-#{$right}: 80px;
+        text-align: center;
+        font-size: 28px;
+        position: relative;
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            margin-#{$right}: 0px;
+            margin-bottom: 50px;
+        }
+
+        .step-label {
+            display: block;
+        }
+
+        .step-no {
+            display: inline-block;
+            position: relative;
+
+            label {
+                position: relative;
+                z-index: 1;
+                padding: 10px;
+                background: $blue;
+                color: $white;
+                width: 50px;
+                display: block;
+                border-radius: 50%;
+                height: 50px;
+                line-height: 30px;
+                font-family: $font-roboto;
+
+                &:after {
+                    content: "\f04e";
+                    font: normal normal normal 14px/1 FontAwesome;
+                    position: absolute;
+                    #{$right}: -60px;
+                    top: 50%;
+                    margin-top: -3px;
+                    font-size: 8px;
+
+                    @include arabicrotate(180deg);
+
+                    @media (max-width: $screen-xs-max) {
+                        transform: rotate(90deg);
+                        top: 100%;
+                        margin-top: 40px;
+                        #{$right}: 50%;
+                        margin-#{$right}: -2px;
+                    }
+                }
+            }
+
+            &:before {
+                background: white;
+                #{$left}: -6px;
+                #{$right}: -6px;
+                top: -6px;
+                bottom: -6px;
+                content: "";
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                border: 4px solid rgba(255, 255, 0, 0.5);
+                box-sizing: content-box;
+            }
+
+            &:after {
+                content: "";
+                #{$right}: -50px;
+                display: inline-block;
+                top: 50%;
+                width: 25px;
+                height: 2px;
+                background: $blue;
+                position: absolute;
+
+                @media (max-width: $screen-xs-max) {
+                    #{$right}: 50%;
+                    top: 100%;
+                    transform: rotate(90deg);
+                    margin-top: 23px;
+                    margin-#{$right}: -10px;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-#{$right}: 0px;
+
+            .step-no {
+                &:after, :after {
+                    content: none;
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+                margin-bottom: 0px;
+            }
+        }
+
+        &.active {
+            font-size: 30px;
+            font-family: $font-gess-medium;
+
+            .step-no label {
+                width: 70px;
+                height: 70px;
+                line-height: 50px;
+            }
+        }
+
+        $colors: (blue #1e577f #8eabbf) (lightYellow #b5b0a3 #dbd9d3) (orange #e86f2d #f3b796) (gray #a0a0a0 #cfcfcf) (yellow #b79e5b #dbcead);
+
+        @each $color in $colors {
+            &.#{nth($color, 1)}-step {
+                color: nth($color, 2);
+
+                .step-no {
+                    label {
+                        background: nth($color, 2);
+
+                        &:after {
+                            color: nth($color, 2);
+                        }
+                    }
+
+                    &:before {
+                        border: 4px solid nth($color, 3);
+                    }
+
+                    &:after {
+                        background: nth($color, 2);
+                    }
+                }
+            }
+        }
+    }
+}

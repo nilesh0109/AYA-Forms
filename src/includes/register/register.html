@@ -1,0 +1,923 @@
+<div class="container">
+	<div class="wizard">
+		<div class="wizard-links hidden-xs">
+			<div class="wizard-link active">
+				<a href="javascript:void(0)">
+					<span class="step-no">1</span>
+					<span class="tab-name">Account Info</span>
+				</a>
+			</div>
+			<div class="wizard-link">
+				<a href="javascript:void(0)">
+					<span class="step-no">2</span>
+					<span class="tab-name">Personal Info</span>
+				</a>
+			</div>
+			<div class="wizard-link">
+				<a href="javascript:void(0)">
+					<span class="step-no">3</span>
+					<span class="tab-name">Contact Info</span>
+				</a>
+			</div>
+			<div class="wizard-link">
+				<a href="javascript:void(0)">
+					<span class="step-no">4</span>
+					<span class="tab-name">Attachments Info</span>
+				</a>
+			</div>
+		</div>
+		<div class="wizard-pages" data-regTypeIndex="i">
+			<!-- ****************************** tab 1 (common) ************************************ -->
+			<div class="wizard-page active">
+				<div class="wizard-link mobile-link hidden visible-xs">
+					<a href="javascript:void(0)">
+						<span class="step-no">1</span>
+						<span class="tab-name">Account Info</span>
+					</a>
+				</div>
+				<div class="form-validate full-width">
+					<div class="row">
+						<div class="col-50">
+							<label for="type" class="reg form-label">Registration Type</label>
+							<div class="custom-select type1 not-chosen choose-type" data-weburl='http://spnelson:2180' data-lcid='1033'>
+								<select name="type1"  data-rule-required="true" data-msg-required="Please select a value">
+									<option value="" disabled selected>Select</option>
+									<option value="i">Individual</option>
+									<option value="p">Private Company</option>
+									<option value="o">Organization</option>
+									<option value="g">Government</option>
+								</select>
+							</div>
+							<div class="custom-select type2 entity-type not-chosen disabled">
+								<select name="type2" disabled data-rule-required="true" data-msg-required="Please select a value">
+									<option value="" disabled selected>Select</option>
+									<option value="citizen">Citizen</option>
+									<option value="resident">Resident</option>
+									<option value="visitor">Visitor</option>
+									<option value="outofuae">Out Of UAE</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-50">
+							<label for="email" class="reg form-label">Email</label>
+							<input type="email" name="email" class="email-field" placeholder="account@mail.com" data-rule-required="true" data-msg-required="Please enter your email" data-rule-email="true" data-msg-email="Please enter a valid email" data-weburl='http://spnelson:2180'>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-50">
+							<label for="password" class="reg form-label">Passowrd</label>
+							<input type="password" id="pass" name="password" required placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" data-rule-required="true" data-msg-required="Please enter your password" data-rule-password="true" data-msg-password="password should be atleast 8 letters long">
+						</div>
+						<div class="col-50">
+							<label for="cnfrmpassword" class="reg form-label">Confirm Password</label>
+							<input type="password" name="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" data-rule-passmatch="#pass" data-msg-passmatch="password is not matching">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-50">
+							<label for="language" class="reg form-label">Language(English/SMS)</label>
+							<div class="custom-select not-chosen">
+								<select data-rule-required="true" data-msg-required="Please select a language">
+									<option value="" disabled selected>Select</option>
+									<option value="english">English</option>
+									<option value="arabic">Arabic</option>
+									<option value="sms">SMS</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="error-box clearfix email-error-box">
+						<div class="float-l red-text">Your Email is already registered</div>
+						<div class="login-links float-r">
+							<a href="#" class="blue-text">login</a>
+							<a href="#" class="blue-text underlined-link">Forgot Password?</a>
+						</div>
+					</div>
+					<div class="action-buttons clearfix">
+						<div class="float-l">
+							<a href="javascript:void(0)" class="btn reset">Reset</a>
+						</div>
+						<div class="float-r">
+							<a href="javascript:void(0)" class="btn prev disabled">Previous</a>
+							<a href="javascript:void(0)" class="btn next firstnext">
+								<span class="nextlbl">Next</span>
+								<span class="submitlbl">Submit</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- **************************************** Individual tabs ************************************************* -->
+			<div class="tab-wrappers show" data-formIndex="i">
+				<!-- ****************************** tab 2 (individual) ************************************ -->
+				<div class="wizard-page">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Personal Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								<label for="title" class="reg form-label">Title:</label>
+								<div class="custom-select  not-chosen">
+									<select data-rule-required="true" data-msg-required="Please select a title" name="title">
+										<option value="" disabled selected>Select</option>
+										<option value="mr">Mr.</option>
+										<option value="mrs">Mrs.</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-50">
+								<label for="gender" class="form-label">Gender</label>
+								<div class="radiobox">
+									<label><input type="radio" name="gender" value="male" checked><span class="radio-content">male</span></label>
+									<label><input type="radio" name="gender" value="female"><span class="radio-content"> female</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="fnamear" class="form-label">First Name:<span class="yellow-text">(Arabic)</span></label>
+								<input type="text" name="fnamear" placeholder="Your First Name" data-rule-language="arabic" data-msg-language="Only arabic letters are allowed">
+							</div>
+							<div class="col-50">
+								<label for="fnameen" class="form-label">First Name:<span class="yellow-text">(English)</span></label>
+								<input type="text" name="fnameen" placeholder="Your First Name" data-rule-language="english" data-msg-language="Only english letters are allowed">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="mnamear" class="form-label">Middle Name:<span class="yellow-text">(Arabic)</span></label>
+								<input type="text" name="mnamear" placeholder="Your Middle Name" data-rule-language="arabic" data-msg-language="Only arabic letters are allowed">
+							</div>
+							<div class="col-50">
+								<label for="mnameen" class="form-label">Middle Name:<span class="yellow-text">(English)</span></label>
+								<input type="text" name="mnameen" placeholder="Your Middle Name" data-rule-language="english" data-msg-language="Only english letters are allowed">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="lnamear" class="form-label">Last Name:<span class="yellow-text">(Arabic)</span></label>
+								<input type="text" name="lnamear" placeholder="Your Last Name" data-rule-language="arabic" data-msg-language="Only arabic letters are allowed">
+							</div>
+							<div class="col-50">
+								<label for="lnameen" class="form-label">Last Name:<span class="yellow-text">(English)</span></label>
+								<input type="text" name="lnameen" placeholder="Your Last Name" data-rule-language="english" data-msg-language="Only english letters are allowed">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="tribenamear" class="form-label">Tribe Name:<span class="yellow-text">(Arabic)</span></label>
+								<input type="text" name="tribenamear" placeholder="Your Tribe Name" data-rule-language="arabic" data-msg-language="Only arabic letters are allowed">
+							</div>
+							<div class="col-50">
+								<label for="tribenameen" class="form-label">Tribe Name:<span class="yellow-text">(English)</span></label>
+								<input type="text" name="tribenameen" placeholder="Your Tribe Name" data-rule-language="english" data-msg-language="Only english letters are allowed">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50 dob-select">
+								<label for="dob" class="form-label">Date Of Birth</label>
+								<div class="custom-select day">
+									<select name="day">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+										<option value="16">16</option>
+										<option value="17">17</option>
+										<option value="18">18</option>
+										<option value="19">19</option>
+										<option value="20">20</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
+										<option value="24">24</option>
+										<option value="25">25</option>
+										<option value="26">26</option>
+										<option value="27">27</option>
+										<option value="28">28</option>
+										<option value="29">29</option>
+										<option value="30">30</option>
+									</select>
+								</div>
+								<div class="custom-select month">
+									<select name="month">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+									</select>
+								</div>
+								<div class="custom-select year">
+									<select name="year">
+										<option value='1950'>1950</option>
+										<option value='1951'>1951</option>
+										<option value='1952'>1952</option>
+										<option value='1953'>1953</option>
+										<option value='1954'>1954</option>
+										<option value='1955'>1955</option>
+										<option value='1956'>1956</option>
+										<option value='1957'>1957</option>
+										<option value='1958'>1958</option>
+										<option value='1959'>1959</option>
+										<option value='1960'>1960</option>
+										<option value='1961'>1961</option>
+										<option value='1962'>1962</option>
+										<option value='1963'>1963</option>
+										<option value='1964'>1964</option>
+										<option value='1965'>1965</option>
+										<option value='1966'>1966</option>
+										<option value='1967'>1967</option>
+										<option value='1968'>1968</option>
+										<option value='1969'>1969</option>
+										<option value='1970'>1970</option>
+										<option value='1971'>1971</option>
+										<option value='1972'>1972</option>
+										<option value='1973'>1973</option>
+										<option value='1974'>1974</option>
+										<option value='1975'>1975</option>
+										<option value='1976'>1976</option>
+										<option value='1977'>1977</option>
+										<option value='1978'>1978</option>
+										<option value='1979'>1979</option>
+										<option value='1980'>1980</option>
+										<option value='1981'>1981</option>
+										<option value='1982'>1982</option>
+										<option value='1983'>1983</option>
+										<option value='1984'>1984</option>
+										<option value='1985'>1985</option>
+										<option value='1986'>1986</option>
+										<option value='1987'>1987</option>
+										<option value='1988'>1988</option>
+										<option value='1989'>1989</option>
+										<option value='1990'>1990</option>
+										<option value='1991'>1991</option>
+										<option value='1992'>1992</option>
+										<option value='1993'>1993</option>
+										<option value='1994'>1994</option>
+										<option value='1995'>1995</option>
+										<option value='1996'>1996</option>
+										<option value='1997'>1997</option>
+										<option value='1998'>1998</option>
+										<option value='1999'>1999</option>
+										<option value='2000'>2000</option>
+										<option value='2001'>2001</option>
+										<option value='2002'>2002</option>
+										<option value='2003'>2003</option>
+										<option value='2004'>2004</option>
+										<option value='2005'>2005</option>
+										<option value='2006'>2006</option>
+										<option value='2007'>2007</option>
+										<option value='2008'>2008</option>
+										<option value='2009'>2009</option>
+										<option value='2010'>2010</option>
+										<option value='2011'>2011</option>
+										<option value='2012'>2012</option>
+										<option value='2013'>2013</option>
+										<option value='2014'>2014</option>
+										<option value='2015'>2015</option>
+										<option value='2016'>2016</option>
+										<option value='2017'>2017</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-50">
+								<label for="nationality" class="form-label">Nationality</label>
+								<div class="custom-select year">
+									<select name="nationality">
+										<option value='India'>India</option>
+										<option value='uae'>UAE</option>
+										<option value='us'>US</option>
+										<option value='pakistan'>pakistan</option>
+										<option value='Afghanistan'>Afghanistan</option>
+										<option value='Albania'>Albania</option>
+										<option value='Algeria'>Algeria</option>
+										<option value='Andorra'>Andorra</option>
+										<option value='Angola'>Angola</option>
+										<option value='Antigua and Barbuda'>Antigua and Barbuda</option>
+										<option value='Argentina'>Argentina</option>
+										<option value='Armenia'>Armenia</option>
+										<option value='Aruba'>Aruba</option>
+										<option value='Australia'>Australia</option>
+										<option value='Austria'>Austria</option>
+										<option value='Azerbaijan'>Azerbaijan</option>
+										<option value='Bahamas, The'>Bahamas, The</option>
+										<option value='Bahrain'>Bahrain</option>
+										<option value='Bangladesh'>Bangladesh</option>
+										<option value='Barbados'>Barbados</option>
+										<option value='Belarus'>Belarus</option>
+										<option value='Belgium'>Belgium</option>
+										<option value='Belize'>Belize</option>
+										<option value='Benin'>Benin</option>
+										<option value='Bhutan'>Bhutan</option>
+										<option value='Bolivia'>Bolivia</option>
+										<option value='Bosnia and Herzegovina'>Bosnia and Herzegovina</option>
+										<option value='Botswana'>Botswana</option>
+										<option value='Brazil'>Brazil</option>
+										<option value='Brunei'>Brunei</option>
+										<option value='Bulgaria'>Bulgaria</option>
+										<option value='Burkina Faso'>Burkina Faso</option>
+										<option value='Burma'>Burma</option>
+										<option value='Burundi'>Burundi</option>
+										<option value='Cambodia'>Cambodia</option>
+										<option value='Cameroon'>Cameroon</option>
+										<option value='Canada'>Canada</option>
+										<option value='Cabo Verde'>Cabo Verde</option>
+										<option value='Central African Republic'>Central African Republic</option>
+										<option value='Chad'>Chad</option>
+										<option value='Chile'>Chile</option>
+										<option value='China'>China</option>
+										<option value='Colombia'>Colombia</option>
+										<option value='Comoros'>Comoros</option>
+										<option value='Congo, Democratic Republic of the'>Congo, Democratic Republic of the</option>
+										<option value='Congo, Republic of the'>Congo, Republic of the</option>
+										<option value='Costa Rica'>Costa Rica</option>
+										<option value='Croatia'>Croatia</option>
+										<option value='Cuba'>Cuba</option>
+										<option value='Curacao'>Curacao</option>
+										<option value='Cyprus'>Cyprus</option>
+										<option value='Czechia'>Czechia</option>
+										<option value='Denmark'>Denmark</option>
+										<option value='Djibouti'>Djibouti</option>
+										<option value='Dominica'>Dominica</option>
+										<option value='Dominican Republic'>Dominican Republic</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="eid" class="form-label reg">EID Number:</label>
+								<input type="text" name="eid" placeholder="xxx-xxxx-xxxxxxx-x" data-rule-required="true" data-msg-required="Please enter your eid" data-rule-pattern="true" pattern="^784-\d{4}-\d{7}-\d{1}$" data-msg-pattern="Invalid EID" maxlength="19">
+							</div>
+							<div class="col-50">
+								<label for="eidexpire" class="form-label">EID Exp Date</label>
+								<div class="input-group date" data-provide="datepicker">
+									<input type="text" class="form-control" name="eidexpire" data-rule-pastdate="true" data-msg-pastdate="Your EID has been expired">
+									<div class="input-group-addon">
+										<span class="fa fa-calendar"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="passport" class="form-label">Passport</label>
+								<input type="text" name="passport" placeholder="xxxxxxx">
+							</div>
+							<div class="col-50">
+								<label for="passportexpire" class="form-label">Passport Exp Date</label>
+								<div class="input-group date" data-provide="datepicker">
+									<input type="text" class="form-control" name="passportexpire" data-rule-pastdate="true" data-msg-pastdate="Your passport has been expired">
+									<div class="input-group-addon">
+										<span class="fa fa-calendar"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 3 (individual) ************************************ -->
+				<div class="wizard-page">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">3</span>
+							<span class="tab-name">Contact Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								<label for="mobile" class="form-label reg">Mobile No:</label>
+								<div class="float-l country-code">
+									<input type="text" name="mobile-c-code" placeholder="+971" data-rule-required="true" data-msg-required="county code Required" data-rule-pattern="true" pattern="^\+\d{1,3}$" data-msg-pattern="Invalid country code" maxlength="4">
+								</div>
+								<div class="overflow-hidden">
+									<input type="text" name="mobile" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no." data-rule-pattern="true" pattern="^\d{9,10}$" data-msg-pattern="Invalid phone Number(No special characters except + are allowed)" maxlength="10">
+								</div>
+							</div>
+							<div class="col-50">
+								<label for="phone" class="form-label">Phone No:</label>
+								<div class="float-l country-code">
+									<input type="text" name="phone-c-code" placeholder="+04" data-rule-required="true" data-msg-required="county code Required" data-rule-pattern="true" pattern="^\+\d{1,3}$" data-msg-pattern="Invalid country code" maxlength="4">
+								</div>
+								<div class="overflow-hidden">
+									<input type="text" name="phone" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no." data-msg-pattern="Invalid mobile Number(No special characters except + are allowed)"  pattern="^\d{9,10}$" maxlength="10">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="emirates" class="form-label">Emirate:</label>
+								<div class="custom-select">
+									<select name="emirates">
+										<option value='Dubai'>Dubai</option>
+										<option value='Abu Dhabi'>Abu Dhabi</option>
+										<option value='Sharjah'>Sharjah</option>
+										<option value='Ras Al Khaimah'>Ras Al Khaimah</option>
+										<option value='Fujairah'>Fujairah</option>
+										<option value='Ajman'>Ajman</option>
+										<option value='Umm Al Quwain'>Umm Al Quwain</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-50">
+								<label for="city" class="form-label">City:</label>
+								<div class="custom-select">
+									<select name="city">
+										<option value='Dubai'>Dubai</option>
+										<option value='Abu Dhabi'>Abu Dhabi</option>
+										<option value='Sharjah'>Sharjah</option>
+										<option value='Ras Al Khaimah'>Ras Al Khaimah</option>
+										<option value='Fujairah'>Fujairah</option>
+										<option value='Ajman'>Ajman</option>
+										<option value='Umm Al Quwain'>Umm Al Quwain</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="address" class="form-label">Address:</label>
+								<textarea name="address" placeholder="add address" ></textarea>
+							</div>
+							<div class="col-50">
+								<label for="pobox" class="form-label">PO Box:</label>
+								<input type="text" name="pobox">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="fax" class="form-label">Fax:</label>
+								<div class="float-l country-code">
+									<input type="text" name="fax-c-code" placeholder="+04" data-rule-required="true" data-msg-required="county code Required">
+								</div>
+								<div class="overflow-hidden">
+									<input type="text" name="fax" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no.">
+								</div>
+							</div>
+							<div class="col-50">
+								<label for="alternateNo" class="form-label">Alternate Mobile:</label>
+								<div class="float-l country-code">
+									<input type="text" name="alternateNo-c-code" placeholder="+971" data-rule-required="true" data-msg-required="county code Required">
+								</div>
+								<div class="overflow-hidden">
+									<input type="text" name="alternateNo" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no.">
+								</div>
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 4 (individual) ************************************ -->
+				<div class="wizard-page">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">4</span>
+							<span class="tab-name">Attachments Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50 profile-container">
+								<figure class="profile-thumbnail">
+									<img src="assets/img/thumbnail.png" />
+								</figure>
+								<div class="profile-file">
+									<label for="profileimg" class="form-label">Profile Image:</label>
+									<div class='file-explorer-wrapper'>
+										<input type='text' class='file-explorer' disabled  placeholder="Upload Image"/>
+										<input type="file" name="profileimg" class="showthumb">
+										<a href='javascript:void(0)' class='browse-link'>
+											<span class="browselbl">Browse</span>
+											<span class="changelbl">Change</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-50">
+								<label for="passportimg" class="form-label">Passport Image:</label>
+								<div class='file-explorer-wrapper'>
+									<input type='text' class='file-explorer' disabled  placeholder="Upload Image"/>
+									<input type="file" name="passportimg">
+									<a href='javascript:void(0)' class='browse-link'>
+										<span class="browselbl">Browse</span>
+										<span class="changelbl">Change</span>
+									</a>
+								</div>
+							</div>
+							<div class="col-50">
+								<label for="eidcopy" class="form-label">EID Copy:</label>
+								<div class='file-explorer-wrapper'>
+									<input type='text' class='file-explorer' disabled  placeholder="Upload Image"/>
+									<input type="file" name="eidcopy">
+									<a href='javascript:void(0)' class='browse-link'>
+										<span class="browselbl">Browse</span>
+										<span class="changelbl">Change</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next submit">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- **************************************** Individual tabs end************************************************* -->
+			<!-- **************************************** Company Tabs************************************************* -->
+			<div class="tab-wrappers" data-formIndex="p">
+				<!-- ****************************** tab 2 (Company) ************************************ -->
+				<div class="wizard-page">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Personal Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								personal info company
+							</div>
+							<div class="col-50">
+								personal info company  2
+							</div>
+						</div>
+						<div class="section-wrapper">
+							<label for="mobile" class="form-label section-heading">Organization:</label>
+							<div class="row">
+								<div class="col-50">
+									<label for="mobile" class="form-label reg">Mobile No:</label>
+									<div class="float-l country-code">
+										<input type="text" name="mobile-c-code" placeholder="+971" data-rule-required="true" data-msg-required="county code Required">
+									</div>
+									<div class="overflow-hidden">
+										<input type="text" name="mobile" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no.">
+									</div>
+								</div>
+								<div class="col-50">
+									<label for="phone" class="form-label">Phone No:</label>
+									<div class="float-l country-code">
+										<input type="text" name="phone-c-code" placeholder="+04" data-rule-required="true" data-msg-required="county code Required">
+									</div>
+									<div class="overflow-hidden">
+										<input type="text" name="phone" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no.">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-wrapper">
+							<label for="mobile" class="form-label section-heading">BRO:</label>
+							<div class="row">
+								<div class="col-50">
+									<label for="mobile" class="form-label reg">Mobile No:</label>
+									<div class="float-l country-code">
+										<input type="text" name="mobile-c-code" placeholder="+971" data-rule-required="true" data-msg-required="county code Required">
+									</div>
+									<div class="overflow-hidden">
+										<input type="text" name="mobile" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no.">
+									</div>
+								</div>
+								<div class="col-50">
+									<label for="phone" class="form-label">Phone No:</label>
+									<div class="float-l country-code">
+										<input type="text" name="phone-c-code" placeholder="+04" data-rule-required="true" data-msg-required="county code Required">
+									</div>
+									<div class="overflow-hidden">
+										<input type="text" name="phone" placeholder="xxxxxxxxx" data-rule-required="true" data-msg-required="Please enter your mobile no.">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 3 (Company) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Contact Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Contact Info   Company 1
+							</div>
+							<div class="col-50">
+								Contact Info   Company 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 4 (Company) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Attachments Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Attachments Info   Company 1
+							</div>
+							<div class="col-50">
+								Attachments Info   Company 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev submit">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- **************************************** Company tabs end************************************************* -->
+			<!-- **************************************** Organization Tabs************************************************* -->
+			<div class="tab-wrappers" data-formIndex="o">
+				<!-- ****************************** tab 2 (Organization) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Personal Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Organization Personal Info 1
+							</div>
+							<div class="col-50">
+								Organization Personal Info 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 3 (Organization) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Contact Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Organization Contact  Info 1
+								
+							</div>
+							<div class="col-50">
+								Organization Contact  Info 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 4 (Organization) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Attachments Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Organization Attachments  Info 1
+							</div>
+							<div class="col-50">
+								Organization Attachments  Info 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev submit">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- **************************************** Organization tabs end************************************************* -->
+			<!-- **************************************** Government Tabs************************************************* -->
+			<div class="tab-wrappers" data-formIndex="g">
+				<!-- ****************************** tab 2 (Government) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Personal Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Government Personal  Info 1
+							</div>
+							<div class="col-50">
+								Government Personal  Info 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 3 (Government) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Contact Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Government Contact  Info 1
+							</div>
+							<div class="col-50">
+								Government Contact  Info 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ****************************** tab 4 (Government) ************************************ -->
+				<div class="wizard-page ">
+					<div class="wizard-link mobile-link hidden visible-xs">
+						<a href="javascript:void(0)">
+							<span class="step-no">2</span>
+							<span class="tab-name">Attachments Info</span>
+						</a>
+					</div>
+					<div class="form-validate full-width">
+						<div class="row">
+							<div class="col-50">
+								Government Attachments  Info 1
+							</div>
+							<div class="col-50">
+								Government Attachments  Info 2
+							</div>
+						</div>
+						<div class="action-buttons clearfix">
+							<div class="float-l">
+								<a href="javascript:void(0)" class="btn reset">Reset</a>
+							</div>
+							<div class="float-r">
+								<a href="javascript:void(0)" class="btn prev">Previous</a>
+								<a href="javascript:void(0)" class="btn next submit">
+									<span class="nextlbl">Next</span>
+									<span class="submitlbl">Submit</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

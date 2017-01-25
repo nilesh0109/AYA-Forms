@@ -1,0 +1,15 @@
+body {
+    direction: rtl;
+}
+
+.visible-en {
+    display: none;
+}
+
+.visible-ar {
+    display: block;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    transform: rotate(180deg);
+}

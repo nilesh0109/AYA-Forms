@@ -1,0 +1,103 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>FDF</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="assets/css/style-en-us.min.css" rel="stylesheet">
+    <script src="assets/components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      @@include('../includes/common/header.html')
+    </header>
+    <main class="main" role="main">
+    @@include('../includes/profile/profile.html')
+    </main>
+    <footer class="footer" role="contentinfo">
+      @@include('../includes/common/footer.html')
+    </footer>
+    <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/js/vendor/bootstrap-datepicker.js"></script>
+    <script src="assets/js/vendor/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+        <script>
+        $(document).ready(function () {
+
+            
+            loadAccordion($('.profile-listing-item').first());
+
+            $('.profile-listing-item span.profile-item-collapse').click(function () {
+                loadAccordion($(this).parents('.profile-listing-item'))
+            });
+            $('.cancel-edit-mode').click(function(){
+                $(this).parents('.profile-listing-item').removeClass('edit-mode');
+            });
+            $('.show-edit-mode').click(function () {
+                $(this).parents('.profile-listing-item').addClass('edit-mode');
+                fillForm($(this).parents('.profile-listing-item'));
+                loadAccordion($(this).parents('.profile-listing-item'))
+            });
+            $('.save-edit-mode').click(function () {
+                if($(this).hasClass('save-edit-mode')){
+                     var valid = fdf.form.validateForm($(this).closest('.form-validate'));
+                    if(!valid){
+                        return false;
+                    }
+                    else{
+                        $(this).parents('.profile-listing-item').removeClass('edit-mode');
+                        loadAccordion($(this).parents('.profile-listing-item'))
+                    }
+                 }
+                
+            })
+            function fillForm(element){
+                 element.find('.profile-caption-edit:not(.ignore-edit)').each(function(){
+                    var $formEle = $(this);
+                    var $formInput = $(this).find('input , select,textarea');
+                    $formInput.each(function(){
+                        var $th = $(this);
+                        var val= $formEle.prev('.profile-caption').text().trim();
+                        if(val.length > 0){
+                            if($th.is('input[type="radio"]')){
+                                 $th.closest('.radiobox').find('input[value='+val+']').prop('checked',true);
+                            }
+                            else if($th.is('input')){
+                                 $th.val(val); 
+                            }
+                            else if($th.is('select')){
+                                $th.parents('.custom-select').removeClass('not-chosen');
+                                $th.find('option').filter(function(){
+                                    return $(this).text().trim() === $formEle.prev('.profile-caption').text().trim();
+                                }).prop('selected',true);
+                            }
+                    }
+                    });
+                    
+                });               
+            } 
+
+            function loadAccordion(element) {
+
+                element.addClass('expand').siblings('.profile-listing-item').removeClass('expand');
+                if (element.find('.profile-scroll').outerHeight() > 396) {
+                    element.find('.profile-scroll').slimScroll({
+                        height: '396px',
+                        railVisible: true,
+                        alwaysVisible: true
+                    });
+                }
+            }
+        })
+
+    </script>
+  </body>
+</html>

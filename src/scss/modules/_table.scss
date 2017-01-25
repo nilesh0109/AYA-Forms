@@ -1,0 +1,44 @@
+.table-container {
+    margin-bottom: 60px;
+    overflow-x: auto;
+}
+
+.table-wrapper {
+    background: $white;
+    display: table;
+    width: 100%;
+
+    .table-row {
+        display: table-row;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 13px;
+
+        .table-col {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 10px;
+            border-#{$right}: 1px solid #e1e1e1;
+            border-bottom: 1px solid #e1e1e1;
+
+            &:last-child {
+                border-#{$right}: 0px;
+            }
+        }
+
+        &.table-head {
+            background: $yellow;
+            color: $white;
+            font-size: 15px;
+
+            .table-col {
+                padding: 20px 10px;
+                border-bottom: 0px;
+            }
+        }
+    }
+
+    .gray-button {
+        border-radius: 3px;
+        border-width: 1px;
+    }
+}

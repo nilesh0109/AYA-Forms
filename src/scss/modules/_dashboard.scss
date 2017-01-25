@@ -1,0 +1,311 @@
+div#ms-designer-ribbon, div#ms-designer-ribbon * {
+    box-sizing: content-box;
+}
+
+div#ms-designer-ribbon img {
+    max-width: none;
+}
+
+.user-form {
+    input[type='text'], input[type='password'] {
+        padding: 6px 10px;
+        border: 0;
+        border-radius: 0;
+        background: #eae2ce;
+        padding-#{$left}: 30px;
+    }
+}
+
+div#s4-bodyContainer {
+    padding: 0;
+}
+
+body.ms-backgroundImage {
+    background: #eae3d0 url(../img/pattern2.png) repeat;
+}
+
+input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover, button:hover {
+    background: #9a8242;
+    border-color: #9a8242;
+}
+
+a:active, a:hover {
+    text-decoration: none;
+}
+
+.flexboxcontainer .flexbox-item {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+
+.flexboxcontainer .flexbox-item:hover {
+    box-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.34);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+}
+
+/*Dashboard*/
+.flexbox-dashboard-item {
+    width: 33.333%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 18px;
+}
+
+.flexboxcontainer.dashboard-container {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.flexbox-dashboard-item figure {
+    height: 100%;
+}
+
+.flexbox-dashboard-item figure img {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.flexbox-dashboard-item a {
+    display: block;
+    width: 100%;
+    height: 250px;
+    color: #3b3216;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    font-size: 18px;
+    position: relative;
+    border: 1px solid #a49257;
+}
+
+.flexbox-dashboard-item a:hover {
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+}
+
+@media only screen and (max-width: 991px) {
+    .flexbox-dashboard-item {
+        width: 33.333%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .flexbox-dashboard-item {
+        width: auto;
+        margin: auto;
+        max-width: 300px;
+    }
+}
+
+a[data-number]:before {
+    content: attr(data-number);
+    position: absolute;
+    z-index: 1;
+    #{$right}: 0;
+    top: 0;
+    width: 57px;
+    height: 57px;
+    text-align: center;
+    display: block;
+    line-height: 57px;
+    background: #ef3f42;
+    border-radius: 50%;
+    margin-top: -10px;
+    margin-#{$right}: -10px;
+    color: #fff;
+    font-size: 26px;
+    box-shadow: -13px 13px 16px 0px rgba(113, 91, 17, 0.22);
+}
+
+.flexboxcontainer.dashboard-container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.flexbox-dashboard-item .item-desc {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 35px;
+}
+
+.loggedin-user-image {
+    float: #{$right};
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-#{$left}: 18px;
+}
+
+.loggedin-user-details {
+    float: #{$right};
+    text-align: #{$right};
+}
+
+.loggedin-user-details span {
+    display: block;
+    line-height: 17px;
+}
+
+span.loggedin-user-name {
+    color: #fff;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+span.loggedin-user-email {
+    font-size: 10pt;
+    color: #f0e1b8;
+}
+
+.loggedin-user-button {
+    position: relative;
+    height: 22px;
+    float: #{$right};
+}
+
+.loggedin-user-button {
+    .logout-button {
+        background: none;
+        border: none;
+        padding: 0;
+        padding-#{$left}: 2px;
+        font-size: 14px;
+        text-align: #{$right};
+        color: #ffffff;
+        outline: none;
+        min-width: 0;
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    .fa {
+        color: #ffffff;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+}
+
+.loggedin-user-button .logout-button:hover {
+    background: none;
+}
+
+.loggedin-user-button .user-form .username:before, .user-form .loggedin-user-button .username:before, .loggedin-user-button .user-form .password:before, .user-form .loggedin-user-button .password:before {
+    position: absolute;
+    #{$left}: 8px;
+    top: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .hidden-sm {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hidden-md {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .visible-xs {
+        display: block;
+    }
+}
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

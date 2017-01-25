@@ -1,0 +1,98 @@
+.list-container {
+    .list-item {
+        background: $white;
+        display: flex;
+        margin-bottom: 20px;
+
+        @media (max-width: $screen-xs-max) {
+            display: block;
+        }
+
+        .img-container {
+            padding: 10px;
+            width: 35%;
+            text-align: center;
+            background: #f2f2f2;
+            border-#{$right}: 1px solid #e1e1e1;
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+            }
+
+            img {
+                display: inline-block;
+                max-width: 95%;
+                vertical-align: middle;
+
+                @media (max-width: $screen-xs-max) {
+                    max-width: 100%;
+                }
+            }
+
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 1%;
+                height: 100%;
+                vertical-align: middle;
+
+                @media (max-width: $screen-xs-max) {
+                    content: "";
+                }
+            }
+        }
+
+        .text-container {
+            padding: 10px;
+            width: 65%;
+            padding-#{$left}: 40px;
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+                text-align: center;
+            }
+
+            .list-title {
+                font-family: $font-gess-medium;
+            }
+        }
+    }
+}
+
+ul.list, ul.list > li {
+    list-style-type: none;
+    list-style: none;
+    padding-start: 0;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+}
+
+.yellow-bullet-list {
+    li {
+        &:before {
+            content: "";
+            display: inline-block;
+            margin-#{$right}: 10px;
+            width: 7px;
+            height: 7px;
+            margin-top: 8px;
+            background: $yellow;
+
+            @extend .float-l;
+        }
+
+        > span {
+            display: block;
+            overflow: hidden;
+        }
+
+        + li {
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        display: inline-block;
+        text-align: $left;
+    }
+}

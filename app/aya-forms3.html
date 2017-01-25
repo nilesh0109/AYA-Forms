@@ -1,0 +1,435 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>FDF</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="assets/css/style-ar-sa.min.css" rel="stylesheet">
+    <script src="assets/components/modernizr/modernizr.js"></script>
+ 
+    <script src="assets/plugins/ckeditor/ckeditor.js"></script>
+    <script src="assets/plugins/ckeditor/init.js"></script>
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="yellow-back">
+  <div class="container clearfix">
+    <div class="user-form float-r">
+      <div class='login-container'>
+        <div class="form-element username">
+          <input type="text" placeholder="User Name:" class="required">
+          
+        </div>
+        <div class="form-element password">
+          <input type="Password" placeholder="Password:" class="required">
+          <a href="forgot-password.html" class="link forgot-pass-link">Forgot Password</a>
+        </div>
+        <div class="form-element">
+          <a href="dashboard.html" class="form-button login-btn">Login</a>
+        </div>
+        <div class="form-element">
+          <a href="register.html" class="button">Register</a>
+        </div>
+      </div>
+      <div class="loggedin-container clearfix">
+        <div class="loggedin-user-image">
+          <img src="assets/img/user.jpg" />
+        </div>
+        <div class="loggedin-user-details">
+          <span class="loggedin-user-name">User Name Sample</span>
+          <span class="loggedin-user-email">mail@account.com</span>
+          <div class="loggedin-user-button">
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+            <input type="button" class="logout-button" value="Logout" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="float-l header-language-container">
+      <div class="language-control">
+        <a class="ar" href="javascript:void(0)">عربي</a>
+        <a class="en" href="javascript:void(0)">English</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="logo-container">
+  <div class="container clearfix">
+    <div class="float-l logo">
+      <a href="/">
+        <img src="assets/img/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="float-r logo">
+      <a href="javascript:void(0)">
+        <img src="assets/img/logo2.png" alt="Logo">
+      </a>
+    </div>
+    <div class="logo awards-logo">
+      <figure class="awards-logo-wrapper">
+        <img src="assets/img/logo3.png" alt="Logo">
+        <a href="#familyAwards" class="familyAwardsLink"></a>
+        <a href="#womenAthelete" class="womenAtheleteLink"></a>
+        <a href="#arabYouth" class="arabYouthLink"></a>
+      </figure>
+    </div>
+  </div>
+</div>
+<div class="login-error-box-wrapper">
+  <div class="login-error-box">
+    <i class="fa fa-3x fa-close"></i>
+    <span>Incorrect Username or password</span>
+  </div>
+</div>
+    </header>
+    <main class="main" role="main">
+    <div class="container form-validate full-width">
+	<section class="steps-container form-section">
+		<div class="form-heading-row">
+			<figure class="img-container">
+				<img src="assets/img/aya-forms/form-logo.png">
+			</figure>
+			<h6 class="heading heading-wrap">
+			جائزة الشيخة فاطمة بنت مبارك
+			للشباب العربي الدولية
+			</h6>
+			<h2 class="heading">الشباب العربي المبدع</h2>
+		</div>
+		<div class="gray-line"></div>
+		<div class="margin-all-30">
+			<div class="steps-wrapper">
+				<div class="step active blue-step">
+					<span class="step-label">الترشح</span>
+					<span class="step-no"><label>1</label></span>
+				</div>
+				<div class="step lightYellow-step">
+					<span class="step-label">الفرز</span>
+					<span class="step-no"><label>2</label></span>
+				</div>
+				<div class="step orange-step">
+					<span class="step-label">التقييم</span>
+					<span class="step-no"><label>3</label></span>
+				</div>
+				<div class="step gray-step">
+					<span class="step-label">التحكيم</span>
+					<span class="step-no"><label>4</label></span>
+				</div>
+				<div class="step yellow-step">
+					<span class="step-label">الاعتماد</span>
+					<span class="step-no"><label>5</label></span>
+				</div>
+			</div>
+		</div>
+		<div class="gray-line"></div>
+		<div class="margin-all-20">
+			يرجى الاطلاع على   دليل تعبئة طلب الترشح
+		</div>
+		<div class="gray-line"></div>
+		<div class="margin-all-20 justify-space-between flex-wrapper">
+			<div class="text-center">
+				<div>
+					<span class="margin-right-10">رقم الطلب</span>
+					<span>Request Number</span>
+				</div>
+				<div>Temp- 1245-AM-78695485515</div>
+			</div>
+			<div class="text-center">
+				<div>
+					<span class="margin-right-10">تاريخ الطلب</span>
+					<span>Request Date</span>
+				</div>
+				<div>21- January-2017</div>
+			</div>
+			<div>
+				<a  class="red-btn" href="javascript:void(0)">
+					<span>سحب ترشيح</span>
+					<span>Withdraw</span>
+				</a>
+			</div>
+		</div>
+		<div class="gray-line"></div>
+		<div class="margin-all-20 text-center mob-text-left">
+			<div class="radiobox">
+				<label><input type="radio" name="category" value="category1" checked><span class="radio-content">المجال الثقافي</span></label>
+				<label><input type="radio" name="category" value="category2"><span class="radio-content"> المجال العلمي والتقني</span></label>
+				<label><input type="radio" name="category" value="category3"><span class="radio-content">المجال الاجتماعي</span></label>
+			</div>
+		</div>
+		<div class="gray-line"></div>
+		<div class="margin-all-20 clearfix padding-bottom-20">
+			<div class="col-30 col-mob-50">
+				<div class="custom-select">
+					<select>
+						<option value="1">من أين عرفت عن الجائزة</option>
+						<option value="2">من أين عرفت عن الجائزة</option>
+						<option value="3">من أين عرفت عن الجائزة</option>
+						<option value="4">من أين عرفت عن الجائزة</option>
+						<option value="5">من أين عرفت عن الجائزة</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-30 col-mob-50">
+				<input type="text" name="tribenameen" placeholder="أخرى" data-rule-language="arabic" data-msg-language="Only arabic letters are allowed">
+			</div>
+		</div>
+	</section>
+	<h3 class="section-title">
+	<i class="fa fa-file-text-o" aria-hidden="true"></i>
+	<span>المعايير</span>
+	</h3>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+		<span class="fa fa-minus fa-lg accordion-link"></span>
+		<span>المعيار الأول: فكرة المبادرة</span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>فكرة المبادرة/ المشروع، والمعطيات الأولية للنتائج، وطبيعة ونوعية التحديات التي واجهت المترشّح أثناء تنفيذه </p>
+			<p>المبادرة/ المشروع، والحلول والبدائل التي تمت دراستها من قبله، وتطبيقها على مبادرته / مشروعه.</p>
+			<textarea id="editor1" class="editor" name="editor1">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of sadasdasdas<a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace( 'editor1' );
+			</script>
+			</textarea>
+		</div>
+	</section>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+		<span class="fa fa-minus fa-lg accordion-link"></span>
+		<span>المعيار الثاني: التخطيط للمبادرة</span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>تحديد أهداف ومجال عمل المترشّح بالنسبة لمبادرته/ مشروعه، والمخرجات المتوقعة من المبادرة/ المشروع، ووجود خطة عمل واضحة، والتخطيط </p>
+			<p>المالي، بالإضافة إلى تحليل المخاطر التي واجهت المبادرة/ المشروع، والاطلاع على مبادرات/ مشاريع أخرى شبيهة بمبادرة/ مشروع المترشّح، وتقييم </p>
+			<p>أساليب عمله، وقياس نتائج مبادرته/ مشروعه.</p>
+			<textarea id="editor2" class="editor" name="editor2">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace( 'editor2' );
+			</script>
+			</textarea>
+		</div>
+	</section>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+			<span class="fa fa-minus fa-lg accordion-link"></span>
+			<span>المعيار الثاني: التخطيط للمبادرة</span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>يركز هذا المعيار على آلية تطبيق المبادرة/ المشروع، وخطوات التنفيذ، ومدى الاستفادة من التقنيات الحديثة في التطبيق، وكيفية الحصول على الدعم المادي  </p>
+			<p>والمعنوي اللازم، ومدى استفادة المترشّح من المهارات والمعارف، ومدى تعلمه منها، وقدرته على تعميمها.</p>
+			<textarea id="editor3" class="editor" name="editor3">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace( 'editor3' );
+			</script>
+			</textarea>
+		</div>
+	</section>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+		<span class="fa fa-minus fa-lg accordion-link"></span>
+		<span>المعيار الرابع: تقييم الإنجازات </span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>يركز هذا المعيار على الإنجازات والنتائج التي يحققها المترشّح من خلال مبادرته/ مشروعه، وانعكاسات المشروع المادية وغير المادية على المترشّح </p>
+			<p>ومحيطه، ومدى مساهمة النتائج في تحقيق أهداف التنمية في المجتمع، والقدرة على تعميم الفوائد على مستويات أوسع. </p>
+			<textarea id="editor4" class="editor" name="editor4">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace('editor4');
+			</script>
+			
+		</div>
+	</section>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+		<span class="fa fa-minus fa-lg accordion-link"></span>
+		<span>المعيار الرابع: تقييم الإنجازات </span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>يركز هذا المعيار على الإنجازات والنتائج التي يحققها المترشّح من خلال مبادرته/ مشروعه، وانعكاسات المشروع المادية وغير المادية على المترشّح </p>
+			<p>ومحيطه، ومدى مساهمة النتائج في تحقيق أهداف التنمية في المجتمع، والقدرة على تعميم الفوائد على مستويات أوسع. </p>
+			<textarea id="editor5" class="editor" name="editor5">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace('editor5');
+			</script>
+			
+		</div>
+	</section>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+		<span class="fa fa-minus fa-lg accordion-link"></span>
+		<span>المعيار الرابع: تقييم الإنجازات </span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>يركز هذا المعيار على الإنجازات والنتائج التي يحققها المترشّح من خلال مبادرته/ مشروعه، وانعكاسات المشروع المادية وغير المادية على المترشّح </p>
+			<p>ومحيطه، ومدى مساهمة النتائج في تحقيق أهداف التنمية في المجتمع، والقدرة على تعميم الفوائد على مستويات أوسع. </p>
+			<textarea id="editor6" class="editor" name="editor6">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace('editor6');
+			</script>
+			
+		</div>
+	</section>
+	<section class="form-section">
+		<h5 class="form-section-heading">
+		<span class="fa fa-minus fa-lg accordion-link"></span>
+		<span>المعيار الرابع: تقييم الإنجازات </span>
+		</h5>
+		<div class="form-content padding-all-20">
+			<p>يركز هذا المعيار على الإنجازات والنتائج التي يحققها المترشّح من خلال مبادرته/ مشروعه، وانعكاسات المشروع المادية وغير المادية على المترشّح </p>
+			<p>ومحيطه، ومدى مساهمة النتائج في تحقيق أهداف التنمية في المجتمع، والقدرة على تعميم الفوائد على مستويات أوسع. </p>
+			<textarea id="editor7" class="editor" name="editor7">
+			<h1>Hello world!</h1>
+			<p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+			</textarea>
+			<script type="text/javascript">
+			CKEDITOR.replace('editor7');
+			</script>
+			
+		</div>
+	</section>
+	<h3 class="section-title">
+	<i class="fa fa-paperclip" aria-hidden="true"></i>
+	<span>المرفقات</span>
+	</h3>
+	<section class="form-section">
+		<div class="form-content padding-all-20 clearfix">
+			<div class="clearfix browse-file margin-bottom-10">
+				<div class="col-15 margin-top-10 col-mob-50">
+					<span>مرفقات المعيار الاول</span>
+				</div>
+				<div class='col-60 col-mob-100'>
+					<div class="file-explorer-wrapper">
+						<a href='javascript:void(0)' class='form-button browse-btn'>
+							<span class="margin-right-10">تصفح</span>
+							<span>Browse</span>
+						</a>
+						<div class="input-wrapper">
+							<input type='text' class='file-explorer' disabled  placeholder=""/>
+							<input type="file" name="" class="showthumb" multiple>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="clearfix margin-bottom-10">
+				<div class="col-15 margin-top-10 col-mob-50">
+					<span>مرفقات المعيار الثالث</span>
+				</div>
+				<div class='col-60 col-mob-100'>
+					<div class="file-explorer-wrapper">
+						<a href='javascript:void(0)' class='form-button browse-btn'>
+							<span class="margin-right-10">تصفح</span>
+							<span>Browse</span>
+						</a>
+						<div class="input-wrapper">
+							<input type='text' class='file-explorer' disabled  placeholder=""/>
+							<input type="file" name="" class="showthumb">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix margin-bottom-10">
+				<div class="col-15 margin-top-10 col-mob-50">
+					<span>مرفقات المعيار الثالث</span>
+				</div>
+				<div class='col-60 col-mob-100'>
+					<div class="file-explorer-wrapper">
+						<a href='javascript:void(0)' class='form-button browse-btn'>
+							<span class="margin-right-10">تصفح</span>
+							<span>Browse</span>
+						</a>
+						<div class="input-wrapper">
+							<input type='text' class='file-explorer' disabled  placeholder=""/>
+							<input type="file" name="" class="showthumb">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix margin-bottom-10">
+				<div class="col-15 margin-top-10 col-mob-50">
+					<span>مرفقات المعيار الرايع</span>
+				</div>
+				<div class='col-60 col-mob-100'>
+					<div class="file-explorer-wrapper">
+						<a href='javascript:void(0)' class='form-button browse-btn'>
+							<span class="margin-right-10">تصفح</span>
+							<span>Browse</span>
+						</a>
+						<div class="input-wrapper">
+							<input type='text' class='file-explorer' disabled  placeholder=""/>
+							<input type="file" name="" class="showthumb">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<h3 class="section-title">
+	<i class="fa fa-file-text-o" aria-hidden="true"></i>
+	<span>الاحكام و الشروط</span>
+	</h3>
+	<section class="form-section">
+		<div class="form-content padding-all-20 clearfix">
+			<div class="checkbox clearfix">
+				<div class="margin-top-10">
+					<label><input type="checkbox" name="checkbox1" value="value1" checked><span class="check-content">الموافقة على الاحكام و الشروط</span></label>
+				</div>
+				<div class="margin-top-20">
+					<label><input type="checkbox" name="checkbox1" value="value2"><span class="check-content"> تم التقديم من خلال مسؤول طلبات الترشح نيابة عن المترشح</span></label>
+				</div>
+			</div>
+			<div class="col-30 col-mob-60 margin-top-20 margin-bottom-20">
+				<input type="text">
+			</div>
+		</div>
+		<div class="gray-line margin-bottom-20"></div>
+		<div class="padding-bottom-10 clearfix">
+			<a href="javascript:void(0)" class="form-button form-submit margin-left-20 margin-bottom-10">تقديم الطلب</a>
+			<a href="javascript:void(0)" class="form-button margin-left-20 margin-bottom-10">حفظ كمسودة</a>
+			<a href="javascript:void(0)" class="form-button margin-left-20 margin-bottom-10">الغاء</a>
+			<a href="javascript:void(0)" class="form-button margin-left-20 margin-bottom-10">عودة</a>
+		</div>
+	</section>
+</div>
+    </main>
+    <footer class="footer" role="contentinfo">
+      <span>
+	Copyrights © 2016 - FDF Awards All rights reserved Total Visitors 2354852
+</span>
+    </footer>
+    <script type="text/javascript">
+    (function(){
+     // initSample();
+     
+    })();
+    </script>
+        <script src="assets/components/jquery/jquery.min.js"></script>
+    <script src="assets/js/aya.js"></script>
+  </body>
+</html>

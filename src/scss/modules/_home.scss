@@ -1,0 +1,108 @@
+.flexbox-wrapper {
+    padding: 75px 0;
+
+    @media (max-width: $screen-xs-max) {
+        padding: 25px 0;
+    }
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1d6ba+0,eae3d1+100&0.5+0,0.5+100 */
+    background: -moz-linear-gradient(left, rgba(225, 214, 186, 0.5) 0%, rgba(234, 227, 209, 0.5) 100%);
+
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(225, 214, 186, 0.5) 0%, rgba(234, 227, 209, 0.5) 100%);
+
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(225, 214, 186, 0.5) 0%, rgba(234, 227, 209, 0.5) 100%);
+
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80e1d6ba', endColorstr='#80eae3d1',GradientType=1 );
+
+    /* IE6-9 */
+}
+
+.flexboxcontainer {
+    display: flex;
+
+    &.noflex-mobile {
+        @media (max-width: $screen-xs-max) {
+            display: block;
+
+            .flexbox-item {
+                margin: 15px auto;
+                width: 100%;
+                max-width: 450px;
+            }
+        }
+    }
+
+    .flexbox-item {
+        margin-#{$right}: 25px;
+        width: 33.33%;
+        text-align: center;
+        box-shadow: 0 0 29px 0px rgba(0, 0, 0, 0.16);
+        display: block;
+        text-decoration: none;
+
+        figure {
+            padding: 20px;
+
+            @media (min-width: $screen-sm-min) {
+                height: 250px;
+            }
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f6f3e9+0,f0ebda+100 */
+            background: #f6f3e9;
+
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #f6f3e9 0%, #f0ebda 100%);
+
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #f6f3e9 0%, #f0ebda 100%);
+
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #f6f3e9 0%, #f0ebda 100%);
+
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f3e9', endColorstr='#f0ebda',GradientType=0 );
+
+            /* IE6-9 */
+            > img {
+                @media (min-width: $screen-sm-min) {
+                    display: block;
+                    margin: auto;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                max-height: 90%;
+            }
+        }
+
+        .item-desc {
+            padding: 25px 30px;
+            background: $white;
+            font-weight: 600;
+            display: block;
+            margin: auto;
+            height: 35%;
+            color: $black;
+
+            > span {
+                display: block;
+
+                @media (min-width: $screen-sm-min) {
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+
+        &:last-child {
+            @media (min-width: $screen-sm-min) {
+                margin-#{$right}: 0px;
+            }
+        }
+    }
+}

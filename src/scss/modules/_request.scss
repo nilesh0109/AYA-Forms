@@ -1,0 +1,80 @@
+.filters-wrapper {
+    background: $white;
+    padding: 15px 0px 20px;
+
+    .filter-row {
+        padding: 15px 30px;
+        border-bottom: 1px solid #e1e1e1;
+
+        @extend .clearfix;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .selected-awards {
+        padding: 0px 30px 15px;
+    }
+
+    .filter-item {
+        font-size: 13px;
+        margin-#{$right}: 10px;
+        margin-top: 10px;
+    }
+
+    .between-dates, .particular-date {
+        display: none;
+
+        &.visible {
+            display: block;
+
+            @media (max-width: $screen-xs-max) {
+                display: block;
+
+                .col-20 {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .particular-date {
+        &.visible {
+            @media (max-width: $screen-xs-max) {
+                .col-20 {
+                    width: 100%;
+                    padding-#{$right}: 0;
+                }
+            }
+        }
+    }
+
+    .radiobox {
+        margin-bottom: 10px;
+    }
+
+    .form-button {
+        margin-top: 40px;
+    }
+}
+
+.table-wrapper {
+    margin-top: 20px;
+}
+
+.req-no-wrapper {
+    @media (max-width: $screen-xs-max) {
+        border: 0;
+        padding: 0;
+        position: relative;
+        top: 10px;
+        width: 100%;
+    }
+}
+
+.filter-submit {
+    @media (max-width: $screen-xs-max) {
+        float: none;
+    }
+}

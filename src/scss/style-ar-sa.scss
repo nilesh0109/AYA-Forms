@@ -1,0 +1,64 @@
+//----------------------------------*\
+// SCSS MIXINS
+//----------------------------------*/
+
+@import "mixins/_position.scss";
+
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
+
+// Config modules
+@import "modules/_vars.scss";
+@import "arabic/_vars.scss";
+@import "modules/_fonts.scss";
+@import "modules/_mixins.scss";
+@import "arabic/_mixins.scss";
+
+@import "modules/_clearfix.scss";
+@import "modules/_defaults.scss";
+@import "modules/_normalize.scss";
+
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
+
+@import "partials/_header.scss";
+@import "partials/_nav.scss";
+@import "partials/_sidebar.scss";
+@import "partials/_main.scss";
+@import "partials/_footer.scss";
+
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+@import "modules/_tooltip.scss";
+@import "modules/_buttons.scss";
+@import "modules/_inputs.scss";
+@import "modules/_lists.scss";
+@import "modules/_typography.scss";
+@import "modules/_misc.scss";
+@import "modules/_form.scss";
+@import "modules/_table.scss";
+@import "modules/_pagination.scss";
+@import "modules/_tabs-wizard.scss";
+@import "modules/_app.scss";
+@import "modules/_modal.scss";
+@import "modules/_home.scss";
+@import "modules/_register.scss";
+@import "modules/_dashboard.scss";
+@import "modules/_request.scss";
+@import "modules/_profile.scss";
+@import "modules/_forgot-pass.scss";
+@import "modules/_aya-forms.scss";
+
+// Enhancement modules
+@import "modules/_breakpoints.scss";
+@import "modules/_print.scss";
+
+//----------------------------------*\
+// VENDOR
+//----------------------------------*/
+
+@import "vendor/_external.scss";
+@import "arabic/_arabic.scss";

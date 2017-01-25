@@ -1,0 +1,179 @@
+.logo-container {
+    padding: 30px 0;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.user-form {
+    padding: 10px 0px 10px;
+
+    @media (max-width: $screen-xs-max) {
+        float: none !important;
+        text-align: center;
+    }
+
+    .form-element {
+        display: inline-block;
+        vertical-align: top;
+        margin-#{$left}: 5px;
+
+        input[type="text"], input[type="password"] {
+            border: 1px solid rgba(255, 255, 255, 0);
+        }
+
+        &.error {
+            &:before {
+                color: red;
+            }
+
+            input[type="text"], input[type="password"] {
+                border: 1px solid red;
+            }
+
+            ::-webkit-input-placeholder {
+                color: red;
+            }
+
+            :-moz-placeholder {
+                /* Firefox 18- */
+                color: red;
+            }
+
+            ::-moz-placeholder {
+                /* Firefox 19+ */
+                color: red;
+            }
+
+            :-ms-input-placeholder {
+                color: red;
+            }
+        }
+    }
+
+    .forgot-pass-link {
+        display: block;
+
+        @media (max-width: $screen-xs-max) {
+            text-align: $left;
+        }
+    }
+
+    .username {
+        position: relative;
+
+        &:before {
+            content: "\f007";
+            position: absolute;
+            top: 7px;
+            #{$left}: 11px;
+            color: #656565;
+
+            @extend .fa;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: table;
+            margin: 5px auto;
+        }
+    }
+
+    .password {
+        position: relative;
+
+        &:before {
+            content: "\f023";
+            position: absolute;
+            top: 7px;
+            #{$left}: 11px;
+            color: #656565;
+
+            @extend .fa;
+        }
+
+        @media (max-width: $screen-xs-max) {
+            display: table;
+            margin: 5px auto;
+        }
+    }
+}
+
+.login-error-box-wrapper {
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    #{$left}: 0px;
+    background: rgba(0, 0, 0, 0.28);
+    text-align: center;
+    overflow: auto;
+    z-index: 100;
+
+    .login-error-box {
+        display: inline-block;
+        border: 1px solid $red;
+        position: relative;
+        top: 200px;
+        padding: 10px;
+        background: rgba(255, 0, 0, 0.28);
+        color: $white;
+    }
+
+    .fa-close {
+        display: inline-block;
+        vertical-align: middle;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        background: white;
+        color: $red;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+    }
+}
+
+.awards-logo {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: -80px;
+
+    .awards-logo-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        clear: both;
+    }
+
+    .familyAwardsLink, .arabYouthLink, .womenAtheleteLink {
+        position: absolute;
+        display: block;
+    }
+
+    .familyAwardsLink {
+        left: 20px;
+        top: 80px;
+        width: 59px;
+        height: 74px;
+    }
+
+    .arabYouthLink {
+        top: 80px;
+        left: 170px;
+        width: 65px;
+        height: 74px;
+    }
+
+    .womenAtheleteLink {
+        top: 80px;
+        left: 82px;
+        width: 80px;
+        height: 85px;
+    }
+}

@@ -1,0 +1,92 @@
+.form-button {
+    padding: 1px 30px;
+    background: $blue;
+    border: 0;
+    color: $white;
+    display: inline-block;
+    border: 2px solid $blue;
+
+    &.yellow {
+        background: $yellow;
+        border: 2px solid $yellow;
+    }
+
+    &.gray {
+        background: $gray;
+        border: 2px solid $medgray;
+        color: $darkgray;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: $black;
+    background: rgba(202, 177, 109, 1);
+    background: -moz-linear-gradient(left, rgba(202, 177, 109, 1) 0%, rgba(212, 189, 128, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(202, 177, 109, 1)), color-stop(100%, rgba(212, 189, 128, 1)));
+    background: -webkit-linear-gradient(left, rgba(202, 177, 109, 1) 0%, rgba(212, 189, 128, 1) 100%);
+    background: -o-linear-gradient(left, rgba(202, 177, 109, 1) 0%, rgba(212, 189, 128, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(202, 177, 109, 1) 0%, rgba(212, 189, 128, 1) 100%);
+    background: linear-gradient(to right, rgba(202, 177, 109, 1) 0%, rgba(212, 189, 128, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cab16d', endColorstr='#d4bd80', GradientType=1 );
+}
+
+.btn {
+    width: 134px;
+    display: inline-block;
+    padding: 10px 0;
+    border: 0;
+    box-shadow: none;
+    line-height: 12px;
+    color: $white;
+    display: inline-block;
+    text-align: center;
+
+    @media (max-width: $screen-xs-max) {
+        max-width: 100px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &.reset {
+        border: 2px solid #bfbfbf;
+        background: #ececec;
+        color: #656565;
+    }
+
+    &.prev {
+        background: #d3bd7f;
+        margin-#{$right}: 10px;
+    }
+
+    &.next {
+        background: #0186ae;
+    }
+
+    &.disabled {
+        opacity: 0.4;
+        color: #8e8a7d;
+    }
+}
+
+.gray-button {
+    border: 2px solid $medgray;
+    background: $gray;
+    padding: 5px 20px;
+    color: $darkgray;
+    line-height: 18px;
+
+    .fa {
+        margin-#{$left}: 25px;
+        color: $darkgray;
+    }
+
+    &.rounded {
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 0 4px 4px -3px rgba(0, 0, 0, 0.52);
+    }
+}

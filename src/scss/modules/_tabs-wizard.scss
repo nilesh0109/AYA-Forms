@@ -1,0 +1,174 @@
+.wizard {
+    margin: 55px 0 75px;
+
+    .wizard-links {
+        @media (min-width: $screen-sm-min) {
+            display: flex;
+        }
+    }
+
+    .wizard-link {
+        width: 25%;
+        margin-#{$right}: 10px;
+        background: #cfc29d;
+        margin-bottom: 10px;
+        transition: all 0.15s ease-in-out;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            #{$left}: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        &.mobile-link {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-#{$right}: 0px;
+        }
+
+        > a {
+            color: $white;
+            display: block;
+            padding: 10px;
+            font-weight: bold;
+
+            .step-no {
+                border-radius: 50%;
+                margin-#{$left}: 20px;
+                margin-#{$right}: 10px;
+                background: $white;
+                width: 32px;
+                height: 32px;
+                line-height: 2;
+                text-align: center;
+                color: $yellow;
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+                span {
+                    vertical-align: top;
+                }
+            }
+
+            @media (max-width: $screen-sm-max) {
+                .step-no {
+                    margin-#{$left}: 0px;
+                    margin-#{$right}: 5px;
+                }
+
+                .tab-name {
+                    max-width: 70%;
+                    max-width: calc(100% - 85px);
+                    max-width: -webkit-calc(100% - 85px);
+                    max-width: -moz-calc(100% - 85px);
+                    max-width: -ms-calc(100% - 85px);
+                }
+            }
+        }
+
+        &.active {
+            background: $white;
+            margin-bottom: 0px;
+
+            &:before {
+                content: none;
+            }
+
+            > a {
+                color: $darkgray;
+
+                .step-no {
+                    background: $darkgray;
+                    color: $white;
+                }
+            }
+        }
+
+        &.activated {
+            background: #b69d5b;
+
+            &:before {
+                content: none;
+            }
+        }
+    }
+
+    .wizard-pages {
+        background: $white;
+        overflow: hidden;
+
+        .wizard-page {
+            margin: 80px 125px 30px;
+
+            @media (min-width: $screen-sm-min) {
+                display: none;
+            }
+
+            @media (max-width: $screen-xs-max) {
+                .form-validate {
+                    transition: max-height 0.25s ease-in-out;
+                    max-height: 0px;
+                    overflow: hidden;
+                }
+            }
+
+            &.active {
+                @media (min-width: $screen-sm-min) {
+                    display: block;
+                }
+
+                @media (max-width: $screen-xs-max) {
+                    .form-validate {
+                        max-height: 10000px;
+                    }
+                }
+            }
+
+            @media (max-width: $screen-xs-max) {
+                margin: 40px 20px 15px;
+
+                .form-validate {
+                    margin: 0px 10px;
+                }
+
+                &.active, &.activated {
+                    .mobile-link {
+                        background: #b69d5b;
+
+                        &:before {
+                            content: none;
+                        }
+
+                        &:after {
+                            content: "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div[data-regtypeindex] {
+        div[data-formindex] {
+            @media (max-width: $screen-xs-max) {
+                display: none;
+            }
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+}
